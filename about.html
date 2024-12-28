@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            color: #333;
+        }
+
+        h2, h3 {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background: linear-gradient(145deg, #6c5ce7, #5e54e9);
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-body {
+            background-color: #ffffff;
+        }
+
+        .rating {
+            font-size: 1.5rem;
+            color: #f1c40f;
+        }
+
+        .bg-light-custom {
+            background-color: #f9f9f9;
+        }
+
+        /* Hover effects */
+        .btn-primary {
+            background-color: #6c5ce7;
+            border-color: #6c5ce7;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #5e54e9;
+            border-color: #5e54e9;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #28a745;
+            padding-left: 15px;
+        }
+
+        /* Custom Section Styles */
+        .team-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .team-card .card-body {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .team-card .card-body h5 {
+            font-weight: 600;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #6c5ce7;
+        }
+
+        .faq-answer {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .testimonial-card img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">A-TECH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container py-5">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p class="text-center mb-5">Welcome to A-Tech, your go-to technology solutions provider. We offer high-quality
+            products and services to help you stay ahead in the tech world.</p>
+
+      
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Alba Nimani</h5>
+                        <p class="card-text">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ardona Gjyrevci</h5>
+                        <p class="card-text">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Dalina Baraliu</h5>
+                        <p class="card-text">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+    <div class="d-flex justify-content-center align-items-center vh-50 gap-4">
+            <div class="col-md-4">
+                <br/>
+                <div class="card team-card">
+                    <div class="card team-card text-center shadow-lg"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bahrie Veseli</h5>
+                        <p class="card-text">Chief Technology Officer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <br/>
+                <div class="card team-card">
+                    <div class="card team-card text-center shadow-lg"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Arxhente Kadriu</h5>
+                        <p class="card-text">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+       
+        <div class="text-center mb-5">
+            <br/><br/>
+            <h3>User Ratings</h3>
+            <div class="rating">
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="text-muted">(Based on 120 reviews)</span>
+            </div>
+        </div>
+
+       
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Frequently Asked Questions</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="faq-item">
+                            <p class="faq-question">What products do you offer?</p>
+                            <p class="faq-answer">We offer a wide range of technology products including laptops, smartphones, gadgets, and accessories.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="faq-question">How can I contact customer support?</p>
+                            <p class="faq-answer">You can reach our customer support team via email at support@atech.com or call us at (123) 456-7890.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="faq-question">What is your return policy?</p>
+                            <p class="faq-answer">We offer a 30-day return policy for most products. Please visit our Returns & Exchanges page for more information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card testimonial-card">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="images/pic1.jpg" alt="Customer" class="rounded-circle">
+                        <div>
+                            <h5 class="card-title">Customer Testimonial</h5>
+                            <p class="card-text">"A-Tech has been an amazing partner in helping us upgrade our office tech. The service is top-notch and the products are fantastic!"</p>
+                            <footer class="blockquote-footer">David Lee, <cite title="Source Title">Business Owner</cite></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card testimonial-card">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="images/pic3.jpg" alt="Customer" class="rounded-circle">
+                        <div>
+                            <h5 class="card-title">Customer Testimonial</h5>
+                            <p class="card-text">"The quality of their laptops is exceptional. I'm now working faster and more efficiently thanks to A-Tech's products."</p>
+                            <footer class="blockquote-footer">Sarah Parker, <cite title="Source Title">Freelancer</cite></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card testimonial-card">
+                    <div class="card-body d-flex align-items-center">
+                        <img src="images/pic2.jpg" alt="Customer" class="rounded-circle">
+                        <div>
+                            <h5 class="card-title">Customer Testimonial</h5>
+                            <p class="card-text">"A-Tech helped me set up my home office with all the right tools. I can't recommend them enough!"</p>
+                            <footer class="blockquote-footer">Michael Brown, <cite title="Source Title">Entrepreneur</cite></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center text-white">
+        <p>&copy; 2024 A-Tech. All Rights Reserved.</p>
+    </footer>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
