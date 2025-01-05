@@ -1,151 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | e-commerce</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">A-TECH</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Cart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="orders.html">Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About us</a>
-                    </li>
-                </ul>
-               
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">A-TECH</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.html">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <div class="container py-5">
-        <h2 class="text-center mb-4">Shop</h2>
+      <h2 class="text-center mb-4">Shop</h2>
 
-        <!-- Sorting Dropdown and Search Bar -->
-        <div class="row mb-4">
-            <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Search Products" id="search-bar">
-            </div>
-            <div class="col-md-6 text-end">
-                <select class="form-select" id="sort-filter">
-                    <option value="asc">Price: Low to High</option>
-                    <option value="desc">Price: High to Low</option>
-                    
-                </select>
-            </div>
+      <!-- Sorting Dropdown and Search Bar -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Products"
+            id="search-bar"
+          />
         </div>
+        <div class="col-md-6 text-end">
+          <select class="form-select" id="sort-filter">
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
 
-        <!-- Products Section -->
-        <div class="row" id="product-list">
-            <!-- Product Cards will be inserted here by JavaScript -->
-        </div>
+      <!-- Products Section -->
+      <div class="row" id="product-list">
+        <!-- Product Cards will be inserted here by JavaScript -->
+      </div>
     </div>
 
     <!-- Modal Template -->
-    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="" class="img-fluid" id="product-image" alt="Product">
-                    <p id="product-price"></p>
-                    <p id="product-description"></p>
-                    <button class="btn btn-primary" id="buy-now-btn">Buy Now</button>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="productModal"
+      tabindex="-1"
+      aria-labelledby="productModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="" class="img-fluid" id="product-image" alt="Product" />
+            <p id="product-price"></p>
+            <p id="product-description"></p>
+            <button class="btn btn-primary" id="buy-now-btn">Buy Now</button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Footer Section -->
     <footer class="footer bg-dark text-white py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <img src="images/Apple-Logo.png" alt="Apple Logo" class="img-fluid" style="max-height: 50px;">
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="images/acer.png" alt="Acer Logo" class="img-fluid" style="max-height: 50px;">
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="images/Asus-Logo.png" alt="Asus Logo" class="img-fluid" style="max-height: 50px;">
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="images/dell.png" alt="Dell Logo" class="img-fluid" style="max-height: 50px;">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <img
+              src="images/Apple-Logo.png"
+              alt="Apple Logo"
+              class="img-fluid"
+              style="max-height: 50px"
+            />
+          </div>
+          <div class="col-md-3 text-center">
+            <img
+              src="images/acer.png"
+              alt="Acer Logo"
+              class="img-fluid"
+              style="max-height: 50px"
+            />
+          </div>
+          <div class="col-md-3 text-center">
+            <img
+              src="images/Asus-Logo.png"
+              alt="Asus Logo"
+              class="img-fluid"
+              style="max-height: 50px"
+            />
+          </div>
+          <div class="col-md-3 text-center">
+            <img
+              src="images/dell.png"
+              alt="Dell Logo"
+              class="img-fluid"
+              style="max-height: 50px"
+            />
+          </div>
         </div>
-        
-
+      </div>
     </footer>
 
     <script>
-const products = [
-    { name: 'iPhone 16 Pro', price: 999, image: 'images/product-1.jpg', description: 'A powerful phone with the latest features.' },
-    { name: 'MacBook Air 15-inch', price: 1299, image: 'images/product-2.jpg', description: 'Lightweight, powerful laptop with M3 chip.' },
-    { name: 'PRO X SUPERLIGHT 2 DEX', price: 159, image: 'images/product-3.jpg', description: 'High-end gaming mouse for precision.' },
-    { name: 'BOSE QuietComfort Bluetooth Headphones', price: 289, image: 'images/product-4.jpg', description: 'Noise-cancelling Bluetooth headphones.' },
-    { name: 'iPad Pro 12.9-inch', price: 1099, image: 'images/product-5.jpg', description: 'Powerful tablet with M2 chip and Liquid Retina XDR display.' },
-    { name: 'Samsung Galaxy S24 Ultra', price: 1299, image: 'images/product-6.jpg', description: 'Premium Android smartphone with S Pen support.' },
-    { name: 'Sony WH-1000XM5', price: 399, image: 'images/product-7.jpg', description: 'Premium wireless noise-cancelling headphones.' },
-    { name: 'Apple Watch Series 9', price: 399, image: 'images/product-8.jpg', description: 'Advanced smartwatch with health monitoring.' },
-    { name: 'ASUS ROG Swift Gaming Monitor', price: 799, image: 'images/product-9.jpg', description: '27-inch 4K gaming monitor with 144Hz refresh rate.' },
-    { name: 'DJI Mini 4 Pro', price: 759, image: 'images/product-10.jpg', description: 'Compact drone with 4K camera and obstacle avoidance.' },
-    { name: 'Razer Blackwidow V4 Pro', price: 229, image: 'images/product-11.jpg', description: 'Mechanical gaming keyboard with RGB lighting.' },
-    { name: 'Amazon Echo Show 10', price: 259, image: 'images/product-12.jpg', description: 'Smart display with motion tracking and Alexa.' },
-    { name: 'Canon EOS R6 Mark II', price: 2499, image: 'images/product-13.jpg', description: 'Full-frame mirrorless camera for professionals.' },
-    { name: 'Samsung 49" Odyssey G9', price: 1299, image: 'images/product-14.jpg', description: 'Ultra-wide curved gaming monitor, 240Hz.' },
-    { name: 'Philips Hue Starter Kit', price: 199, image: 'images/product-15.jpg', description: 'Smart lighting system with bridge and bulbs.' },
-    { name: 'NVIDIA GeForce RTX 4080', price: 1599, image: 'images/product-16.jpg', description: 'High-end graphics card for gaming and rendering.' },
-    { name: 'Meta Quest 3', price: 549, image: 'images/product-17.jpg', description: 'Advanced VR headset with mixed reality capabilities.' },
-    { name: 'Samsung 990 PRO 4TB SSD', price: 399, image: 'images/product-18.jpg', description: 'Ultra-fast NVMe SSD with PCIe 4.0.' },
-    { name: 'PlayStation 5 Pro', price: 599, image: 'images/product-19.jpg', description: 'Next-gen gaming console with 8K support.' },
-    { name: 'ASUS ROG Rapture WiFi 7 Router', price: 699, image: 'images/product-20.jpg', description: 'High-performance gaming router with tri-band.' },
-    { name: 'Steam Deck OLED', price: 549, image: 'images/product-21.jpg', description: 'Portable gaming PC with OLED display and enhanced battery.' },
-    { name: 'Corsair MP700 Pro 4TB', price: 499, image: 'images/product-22.jpg', description: 'PCIe Gen5 NVMe SSD with 12,400MB/s speeds.' },
-    { name: 'LG C3 OLED 65-inch', price: 2299, image: 'images/product-23.jpg', description: '4K OLED TV with gaming features and smart capabilities.' },
-    { name: 'Dyson Zone', price: 749, image: 'images/product-24.jpg', description: 'Air-purifying headphones with active noise cancellation.' },
-    { name: 'Framework Laptop 16', price: 1499, image: 'images/product-25.jpg', description: 'Modular, upgradeable laptop with RTX graphics.' },
-    { name: 'Nothing Phone 2a', price: 349, image: 'images/product-26.jpg', description: 'Innovative smartphone with Glyph interface and clean Android.' },
-    { name: 'Keychron Q3 Pro', price: 219, image: 'images/product-27.jpg', description: 'Wireless mechanical keyboard with QMK/VIA support.' },
-    { name: 'Sonos Era 300', price: 499, image: 'images/product-28.jpg', description: 'Spatial audio smart speaker with Dolby Atmos.' },
-    { name: 'GoPro Hero 12 Black', price: 399, image: 'images/product-29.jpg', description: 'Advanced action camera with 5.3K video and HDR.' },
-    { name: 'Anker 737 Power Bank', price: 149, image: 'images/product-30.jpg', description: '24,000mAh portable charger with 140W output.' },
-    { name: 'Dell UltraSharp U3224KE', price: 1099, image: 'images/product-31.jpg', description: '32-inch 4K IPS Black monitor with Thunderbolt 4.' },
-    { name: 'Backbone One PlayStation', price: 119, image: 'images/product-32.jpg', description: 'Mobile gaming controller for iPhone with PS Remote Play.' }
-];
+      const products = [
+        {
+          name: "iPhone 16 Pro",
+          price: 999,
+          image: "images/products/product-1.png",
+          description: "A powerful phone with the latest features.",
+        },
+        {
+          name: "MacBook Air 15-inch",
+          price: 1299,
+          image: "images/products/product-2.png",
+          description: "Lightweight, powerful laptop with M3 chip.",
+        },
+        {
+          name: "PRO X SUPERLIGHT 2 DEX",
+          price: 159,
+          image: "images/products/product-3.png",
+          description: "High-end gaming mouse for precision.",
+        },
+        {
+          name: "BOSE QuietComfort Bluetooth Headphones",
+          price: 289,
+          image: "images/product-4.jpg",
+          description: "Noise-cancelling Bluetooth headphones.",
+        },
+        {
+          name: "iPad Pro 12.9-inch",
+          price: 1099,
+          image: "images/product-5.jpg",
+          description:
+            "Powerful tablet with M2 chip and Liquid Retina XDR display.",
+        },
+        {
+          name: "Samsung Galaxy S24 Ultra",
+          price: 1299,
+          image: "images/product-6.jpg",
+          description: "Premium Android smartphone with S Pen support.",
+        },
+        {
+          name: "Sony WH-1000XM5",
+          price: 399,
+          image: "images/product-7.jpg",
+          description: "Premium wireless noise-cancelling headphones.",
+        },
+        {
+          name: "Apple Watch Series 9",
+          price: 399,
+          image: "images/product-8.jpg",
+          description: "Advanced smartwatch with health monitoring.",
+        },
+        {
+          name: "ASUS ROG Swift Gaming Monitor",
+          price: 799,
+          image: "images/product-9.jpg",
+          description: "27-inch 4K gaming monitor with 144Hz refresh rate.",
+        },
+        {
+          name: "DJI Mini 4 Pro",
+          price: 759,
+          image: "images/product-10.jpg",
+          description: "Compact drone with 4K camera and obstacle avoidance.",
+        },
+        {
+          name: "Razer Blackwidow V4 Pro",
+          price: 229,
+          image: "images/product-11.jpg",
+          description: "Mechanical gaming keyboard with RGB lighting.",
+        },
+        {
+          name: "Amazon Echo Show 10",
+          price: 259,
+          image: "images/product-12.jpg",
+          description: "Smart display with motion tracking and Alexa.",
+        },
+        {
+          name: "Canon EOS R6 Mark II",
+          price: 2499,
+          image: "images/product-13.jpg",
+          description: "Full-frame mirrorless camera for professionals.",
+        },
+        {
+          name: 'Samsung 49" Odyssey G9',
+          price: 1299,
+          image: "images/product-14.jpg",
+          description: "Ultra-wide curved gaming monitor, 240Hz.",
+        },
+        {
+          name: "Philips Hue Starter Kit",
+          price: 199,
+          image: "images/product-15.jpg",
+          description: "Smart lighting system with bridge and bulbs.",
+        },
+        {
+          name: "NVIDIA GeForce RTX 4080",
+          price: 1599,
+          image: "images/product-16.jpg",
+          description: "High-end graphics card for gaming and rendering.",
+        },
+        {
+          name: "Meta Quest 3",
+          price: 549,
+          image: "images/product-17.jpg",
+          description: "Advanced VR headset with mixed reality capabilities.",
+        },
+        {
+          name: "Samsung 990 PRO 4TB SSD",
+          price: 399,
+          image: "images/product-18.jpg",
+          description: "Ultra-fast NVMe SSD with PCIe 4.0.",
+        },
+        {
+          name: "PlayStation 5 Pro",
+          price: 599,
+          image: "images/product-19.jpg",
+          description: "Next-gen gaming console with 8K support.",
+        },
+        {
+          name: "ASUS ROG Rapture WiFi 7 Router",
+          price: 699,
+          image: "images/product-20.jpg",
+          description: "High-performance gaming router with tri-band.",
+        },
+        {
+          name: "Steam Deck OLED",
+          price: 549,
+          image: "images/product-21.jpg",
+          description:
+            "Portable gaming PC with OLED display and enhanced battery.",
+        },
+        {
+          name: "Corsair MP700 Pro 4TB",
+          price: 499,
+          image: "images/product-22.jpg",
+          description: "PCIe Gen5 NVMe SSD with 12,400MB/s speeds.",
+        },
+        {
+          name: "LG C3 OLED 65-inch",
+          price: 2299,
+          image: "images/product-23.jpg",
+          description:
+            "4K OLED TV with gaming features and smart capabilities.",
+        },
+        {
+          name: "Dyson Zone",
+          price: 749,
+          image: "images/product-24.jpg",
+          description:
+            "Air-purifying headphones with active noise cancellation.",
+        },
+        {
+          name: "Framework Laptop 16",
+          price: 1499,
+          image: "images/product-25.jpg",
+          description: "Modular, upgradeable laptop with RTX graphics.",
+        },
+        {
+          name: "Nothing Phone 2a",
+          price: 349,
+          image: "images/product-26.jpg",
+          description:
+            "Innovative smartphone with Glyph interface and clean Android.",
+        },
+        {
+          name: "Keychron Q3 Pro",
+          price: 219,
+          image: "images/product-27.jpg",
+          description: "Wireless mechanical keyboard with QMK/VIA support.",
+        },
+        {
+          name: "Sonos Era 300",
+          price: 499,
+          image: "images/product-28.jpg",
+          description: "Spatial audio smart speaker with Dolby Atmos.",
+        },
+        {
+          name: "GoPro Hero 12 Black",
+          price: 399,
+          image: "images/product-29.jpg",
+          description: "Advanced action camera with 5.3K video and HDR.",
+        },
+        {
+          name: "Anker 737 Power Bank",
+          price: 149,
+          image: "images/product-30.jpg",
+          description: "24,000mAh portable charger with 140W output.",
+        },
+        {
+          name: "Dell UltraSharp U3224KE",
+          price: 1099,
+          image: "images/product-31.jpg",
+          description: "32-inch 4K IPS Black monitor with Thunderbolt 4.",
+        },
+        {
+          name: "Backbone One PlayStation",
+          price: 119,
+          image: "images/product-32.jpg",
+          description:
+            "Mobile gaming controller for iPhone with PS Remote Play.",
+        },
+      ];
 
+      function displayProducts(products) {
+        const productList = document.getElementById("product-list");
+        productList.innerHTML = ""; // Clear previous products
 
-        function displayProducts(products) {
-            const productList = document.getElementById('product-list');
-            productList.innerHTML = ''; // Clear previous products
-
-            products.forEach(product => {
-                const productCard = `
+        products.forEach((product) => {
+          const productCard = `
                     <div class="col-md-3 mb-4">
                         <div class="card h-100">
                             <img src="${product.image}" class="card-img-top" alt="${product.name}">
@@ -157,57 +364,64 @@ const products = [
                         </div>
                     </div>
                 `;
-                productList.innerHTML += productCard;
-            });
+          productList.innerHTML += productCard;
+        });
+      }
+
+      function showModal(name, price, image, description) {
+        document.getElementById("productModalLabel").innerText = name;
+        document.getElementById("product-price").innerText = `Price: ${price}€`;
+        document.getElementById("product-image").src = image;
+        document.getElementById("product-description").innerText = description;
+        document.getElementById("buy-now-btn").onclick = function () {
+          addToCart(name, price, image);
+        };
+      }
+
+      function addToCart(productName, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const product = { name: productName, price, image, quantity: 1 };
+        const existingProductIndex = cart.findIndex(
+          (item) => item.name === productName
+        );
+
+        if (existingProductIndex !== -1) {
+          cart[existingProductIndex].quantity++;
+        } else {
+          cart.push(product);
         }
 
-        function showModal(name, price, image, description) {
-            document.getElementById('productModalLabel').innerText = name;
-            document.getElementById('product-price').innerText = `Price: ${price}€`;
-            document.getElementById('product-image').src = image;
-            document.getElementById('product-description').innerText = description;
-            document.getElementById('buy-now-btn').onclick = function() {
-                addToCart(name, price, image);
-            };
-        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.location.href = "cart.html";
+      }
 
-        function addToCart(productName, price, image) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const product = { name: productName, price, image, quantity: 1 };
-            const existingProductIndex = cart.findIndex(item => item.name === productName);
-
-            if (existingProductIndex !== -1) {
-                cart[existingProductIndex].quantity++;
-            } else {
-                cart.push(product);
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-            window.location.href = 'cart.html';
-        }
-
-        // Sorting products based on the selected filter
-        document.getElementById('sort-filter').addEventListener('change', function() {
-            const selectedFilter = this.value;
-            let sortedProducts = [...products];
-            if (selectedFilter === 'asc') {
-                sortedProducts.sort((a, b) => a.price - b.price);
-            } else if (selectedFilter === 'desc') {
-                sortedProducts.sort((a, b) => b.price - a.price);
-            } 
-            displayProducts(sortedProducts);
+      // Sorting products based on the selected filter
+      document
+        .getElementById("sort-filter")
+        .addEventListener("change", function () {
+          const selectedFilter = this.value;
+          let sortedProducts = [...products];
+          if (selectedFilter === "asc") {
+            sortedProducts.sort((a, b) => a.price - b.price);
+          } else if (selectedFilter === "desc") {
+            sortedProducts.sort((a, b) => b.price - a.price);
+          }
+          displayProducts(sortedProducts);
         });
 
-        // Search functionality
-        document.getElementById('search-bar').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
-            displayProducts(filteredProducts);
+      // Search functionality
+      document
+        .getElementById("search-bar")
+        .addEventListener("input", function () {
+          const query = this.value.toLowerCase();
+          const filteredProducts = products.filter((product) =>
+            product.name.toLowerCase().includes(query)
+          );
+          displayProducts(filteredProducts);
         });
 
-        // Initially display products
-        displayProducts(products);
+      // Initially display products
+      displayProducts(products);
     </script>
-   
-</body>
+  </body>
 </html>
